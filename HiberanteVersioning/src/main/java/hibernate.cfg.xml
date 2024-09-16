@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hbm2ddl.auto">create</property>
+        
+    <!-- To inform HIBERNATE about db information -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">Nikhil@0810</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/demo</property>
+        <property name="hibernate.connection.username">root</property>
+        
+        
+        <!-- to inform the db to generate the qeury specific to the database engine -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        
+        <!-- to inform hibernate to diplay the queries in the formatted style during the execution -->
+        <property name="hibernate.format_sql"> true</property>
+        
+        
+        <!-- this is used to inform to display queries  generated during the execution -->
+        
+        <!-- to inform hiberante to display the quereies generated during execution -->
+        <property name="hibernate.show_sql">true</property>
+        
+        
+        
+        
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        
+        
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+        
+       
+    </session-factory>
+</hibernate-configuration>
